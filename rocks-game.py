@@ -12,9 +12,10 @@ rolls = ['rock', 'paper', 'scissors']
 
 def validate_roll(player):
     roll = input(f'{player}, choose your roll (rock,paper,scissors) ')
+    roll = roll.lower().strip()
     while roll not in rolls:
         print(f'{player}, {roll} is not a roll')
-        roll = input('Please choose a valid roll (rock, paper, scissors) ')
+        roll = input('Please choose a valid roll (rock, paper, scissors) ').lower().strip()
         print()
     return roll
 
